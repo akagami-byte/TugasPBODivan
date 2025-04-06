@@ -80,11 +80,11 @@ public class Character {
                     addInventory(item);
                     this.bonusDamage += 18;
                 }
-                case "Tongkat baseball" -> {
+                case "Ju-hee" -> {
                     addInventory(item);
                     this.bonusDamage += 10;
                 }
-                case "Ramuan ajaib" -> {
+                case "Kartu Akses" -> {
                     addInventory(item);
                     this.health += 10;
                 }

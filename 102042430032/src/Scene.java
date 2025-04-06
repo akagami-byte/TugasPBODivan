@@ -85,7 +85,25 @@ public class Scene {
         int CariSceneMusuh = getSceneIndex(scenes);
         boolean ignoreMusuh = 
         ((CariSceneMusuh == 4 && "C".equalsIgnoreCase(choice)) ||
+        (CariSceneMusuh == 5 && "B".equalsIgnoreCase(choice)) ||
          (CariSceneMusuh == 28 && "B".equalsIgnoreCase(choice)));
+
+        if (CariSceneMusuh == 29) {
+        switch (choice.toUpperCase()) {
+            case "B" -> {
+                if (!player.containsItem("Ju-hee")) {
+                    System.out.println("\n Opsi terkunci karena kamu tidak memilih Ju-hee di scene sebelumnya");
+                    return this; // Tetap di scene saat ini
+                }
+                }
+            case "C" -> {
+                if (!player.containsItem("Kartu Akses")) {
+                    System.out.println("\n Opsi terkunci karena kamu tidak memilih Kartu Akses di scene sebelumnya");
+                    return this; // Tetap di scene saat ini
+                }
+                }
+        }
+    }
 
         switch (choice.toUpperCase()) {
             case "A":

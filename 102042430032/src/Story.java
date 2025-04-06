@@ -30,6 +30,12 @@ public class Story {
             Scene currentScene = scenes[currentSceneIndex];
             currentScene.displayScene();
             
+            if (currentSceneIndex == 30 || currentSceneIndex == 31 || currentSceneIndex == 32) {
+                System.out.println("\n=== Permainan Berakhir ===");
+                System.out.println("Terima kasih telah bermain!");
+                System.exit(0); // Keluar dari program
+            }
+
             System.out.print("Pilihan [A/B/C/INFO]: ");
             String input = getInput();
             
@@ -57,6 +63,10 @@ public class Story {
             // Periksa health setelah setiap aksi
             if (player.getHealth() <= 0) {
                 System.out.println("Game Over! Health Anda habis.");
+                break;
+            }
+            if(player.getXP() <= 100) {
+                System.out.println("Game Over! XP Anda habis..");
                 break;
             }
         }

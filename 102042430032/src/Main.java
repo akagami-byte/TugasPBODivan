@@ -4,7 +4,7 @@
 public class Main {
     public static void main(String[] args) {
         // Create player character
-        Character player = new Character("Player1", 10, 80);
+        Character player = new Character("Player1", 90, 80);
         System.out.println("Selamat datang, " + player.getName() + "!");
         
         
@@ -77,7 +77,7 @@ public class Main {
                  "Ini adalah energi terakhirku, aku akan mengerahkan tenaga terakhirku untuk..." 
                 
 
-            """, "Serang dia secara terus menerus", "Meminta bantuan Ju-hee", "Lari sekuat tenaga untuk membuka ruangan tersebut (wajib ada item kartu)", null, null, null, 0, 0, 0, 0, 0, 0, scenes
+            """, "Serang dia secara terus menerus", "Meminta bantuan Ju-hee", "Lari sekuat tenaga untuk membuka ruangan tersebut (wajib ada item kartu)", null, null, null, 0, 0, 0, 10, 0, 0, scenes
         );
 
         scenes[28] = new Scene(
@@ -103,7 +103,7 @@ public class Main {
                "Oke, dengarkan rencanaku, kita akan menyusup ke markas mereka. Untuk awal, aku akan mengtusmu dan Ju-hee. Sepertinya saat ke 
                sini kalian sudah saling berbincang sedikit sebelumnya ya haha", disusul kawan kawan lain yang tertawa kecil. "Dia adalah 
                prajurit terbaik kami" ikutlah bersamanya. Setelah itu pemimpin menjelaskan detail renacananya dan malam itu pun kami bersiap siap
-            """, "Siapkan diri", "Periksa sekitar lalu mengambil pistol", null, null, null, null, 0, 0, 0, 12, 7, 5, scenes
+            """, "Siapkan diri", "Periksa sekitar lalu mengambil pistol", null, null, null, null, 0, 0, 0, 12, 7, 0, scenes
             );
 
         scenes[26] = new Scene(
@@ -120,11 +120,12 @@ public class Main {
                 "Jika kamu memang keras kepala, silahkan ke koordinat ini, ini adalah koordinat langsung ke markas mereka, kau bisa membunuh 
                 mereka semua dan itu tidak akan menyelesaikan apapun percayalah!"
             
-            """, "Dengarkan rencana dia", "Ambil secarik koordinat lalu pergi", null, null, null, null, 0, 0, 0, 0, 0, 0, scenes
+            """, "Dengarkan rencana dia", "Ambil secarik koordinat lalu pergi", null, null, null, null, 0, 0, 0, 10, -20, 0, scenes
             );
         
         scenes[25] = new Scene(
             """
+
                 Ayahmu tidak salah! awalnya ia hanya meneliti bagaimana hubungan psikis bisa diatur dengan zat khusus. Zat ini ialah
                 zat penenang sekaligus dapat mendoktrin seseorang untuk mengikuti perintah pemberi zat dalam kurun waktu 10 menit. awalnya 
                 hanya digunakan untuk medis dan digunakan untuk mensugesti pasien yang memiliki gejala kejang hebat dan diatur dengan dosis
@@ -148,6 +149,7 @@ public class Main {
 
         scenes[24] = new Scene(
             """
+
                 Setelah berjam jam menunggu, akhirnya kapal sampai di sebuah pelabuha. Baru saja aku turun, aku melihat pemuda dengan penuh 
                 wajah goresan. Dia datang menghampiriku dan berkata "Kau Min-hee kan? Perkenalkan aku Hae-sung. Aku adalah pemimpin dari
                 Underworld. Kau datang tepat waktu. Kami sudah menunggu kedatanganmu.
@@ -167,6 +169,7 @@ public class Main {
 
         scenes[23] = new Scene(
             """
+
                 Maaf telah membuatmu tidak nyaman. Perkenalkan aku Ju-hee, teman ayahmu. "Aku sudah menunggu lama untuk bertemu 
                 denganmu. Ayahmu adalah orang yang baik, dia tidak bersalah. Aku akan membantumu untuk menemukan kebenaran."
                 Banyak hal yang ingin kuketahui, tapi dilihat dari tatapan Ju-hee, aku tahu dia tidak bisa memberitahuku banyak hal. 
@@ -179,26 +182,34 @@ public class Main {
 
         scenes[22] = new Scene(
             """
+
                 Dokumen di laci hangus, tapi aku selamatkan secarik kertas: 
                 "Proyek Naga: Kendalikan masyarakat melalui: 1. "Tunduk" 2. Media 3. mAk- k-ta -Kan ____". 
                 Bagian terakhir terlalu hangus untuk dibaca.    
+
             """, "Ambil foto sisa dokumen ", "Cari petunjuk lain di ruangan", "Kabur sebelum ketahuan", null, null, null, 0, 0, 0, 8, 5, 0, scenes
         );
 
         scenes[21] = new Scene(
             """
+
                 Surat yang belum selesai ini bergetar di tanganmu. 
                 "Jika aku mati, cari Sdr. Han di akademi militer. Dia satu-satunya yang tahu kebenaran tentang Kang. 
                 Kita semua telah dikhianati..." Ada noda darah di sudut kertas.
+
             """, "Bawa surat ini", "Hafalkan isinya lalu bakar", "Buat salinan untuk Underworld", null, null, null, 0, 0, 0, 15, 5, 10, scenes
             );
 
         scenes[20] = new Scene(
             """
+
                 Kartu akses ini bertuliskan "Akses Khusus - Basement Menara Eclips. Pemegang: Dr. Han". 
                 Di baliknya ada coretan: "Jangan percaya siapapun. Mereka bertebaran dimana saja."
+
             """, "Ambil kartu dan kembali melihat flashdisk", "Ambil kartu dan kembali mencari dokumen", null, null, null, null, 0, 0, 0, 10, 5, 8, scenes
             );
+        scenes[20].setSceneItem("A", "Kartu Akses");
+        scenes[20].setSceneItem("B", "Kartu Akses");
 
         scenes[19] = new Scene(
             """
@@ -223,13 +234,16 @@ public class Main {
 
         scenes[17] = new Scene(
                 """
+
                     Flashdisk itu mengeluarkan asap hitam saat aku hancurkan. Ternyata itu perangkat pelacak! 
                     Suara derap sepatu berduri sudah di depan pintu.   
+
                 """, "Kabur lewat jendela belakang", "Hadapi penyusup", "", null, null, null, 0, 0, 0, 10, -3, 7, scenes
             );
 
         scenes[16] = new Scene(
             """
+
                 Ponselmu bergetar saat upload foto ke cloud. "Upload gagal. Jaringan terputus."
                 Ponselmu tiba-tiba panas saat upload mencapai 99%. Peringatan muncul: "Jaringan diawasi oleh sistem keamanan nasional".
                 Dari jendela, ku lihat ada mobil hitam tanpa plat berhenti di depan rumah. Saat aku perhatikan plat itu, "plat itu tidak asing
@@ -242,6 +256,7 @@ public class Main {
 
         scenes[15] = new Scene(
             """
+
                 Gudang ini penuh peti kayu bergambar Kepala babi. Saat aku paksa buka, isinya adalah senjata illegal 
                 dengan stempel "Milik Negara - Untuk Latihan". Dokumen di meja bertuliskan: 
                 "Pengiriman tahap 7 untuk Operasi Naga. Disetujui oleh: Jendral Kang. 
@@ -249,14 +264,17 @@ public class Main {
                 
                 "Dunggg" bunyi kapal sudah mulai berlayar. Sepertinya Kapal tersebut adalah tujuan markas Underworld, aku tidak boleh
                 ketinggalan!"
+
             """, "Ambil dokumen", "Foto semua bukti", "Sabotase pengiriman", null, null, null, 0, 0, 0, 15, 10, 12, scenes
             );
 
         scenes[14] = new Scene(
             """
+
                 Dari celah lemari, aku lihat Geomdo menggeledah dapur dengan wajah geram. "Bos tidak mau ada bukti yang bocor!" 
                 Saat ia membuka jaketnya, aku melihat lencana militer tersembunyi di baliknya! Seorang anak buahnya berbisik: 
                 "Jendral marah kalau proyek ini terbongkar..."    
+
             """, "Serang mereka saat lengah", "Tunggu sampai pergi", "Lempar kaleng sebagai gangguan", null, null, null, 0, 0, 0, 0, 5, 3, scenes
             );
 
@@ -387,7 +405,7 @@ public class Main {
                 Note: Mengalahkan musuh akan mendapatkan XP tambahan tapi scene akan kembali ke sini selama musuh belum mati
 
             """, "Serang dengan senjatamu", "Sembunyi di lemari", "",
-            null, null, null, 10, 5, 5, 0, 0, 0, scenes
+            null, null, null, 10, 5, 5, 2, -10, 0, scenes
         );
         scenes[5].setmusuh("Geomdo", 20);
 
@@ -419,7 +437,7 @@ public class Main {
                 "Ada yang tidak beres di sini. Kenapa ada simbol Kepala babi di dinding? Kenapa semua orang terlihat ketakutan?"
 
             """, "Baca nota diam-diam", "Minta file investigasi resmi", "Tanya tentang simbol Kepala babi",
-            null, null, null, 0, 0, 0, 5, -15, 0, scenes
+            null, null, null, 0, 0, 0, 5, -15, -5, scenes
             );
 
         scenes[2] = new Scene(
@@ -444,7 +462,7 @@ public class Main {
                 Di bar, Geomdo, laki laki bongsor itu duduk tenang sambil melihat sebuah foto. Kamu mencoba mendekatinya, 
                 Geomdo yang melihatmu memakai jaket ayahmu langsung terkaget dan membisikkan sesuatu ke telingamu: "Kamu harus pergi sekarang."
             
-            """, "Tantang Geomdo langsung", "Diam meninggalkan ruangan dan Cari senjata", "Pergi ke ruangan lain", 
+            """, "Tantang Geomdo langsung (+10xp)", "Diam meninggalkan ruangan dan Cari senjata ", "Pergi ke ruangan lain (+5xp)", 
             null, null, null, 0, 0, 0, 10, 0, 5, scenes
             );
 
@@ -504,7 +522,8 @@ public class Main {
         scenes[24].setNextScenes(scenes[25], scenes[26], scenes[26]); //fix
         scenes[25].setNextScenes(scenes[27], scenes[27], scenes[27]);
         scenes[27].setNextScenes(scenes[28], scenes[28], scenes[28]);
-        scenes[28].setNextScenes(scenes[28], scenes[28], null);
+        scenes[28].setNextScenes(scenes[29], scenes[29], null);
+        scenes[29].setNextScenes(scenes[30], scenes[31], scenes[32]);
 
 
         Story adventure = new Story(scenes, player);
