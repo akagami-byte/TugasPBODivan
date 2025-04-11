@@ -4,7 +4,7 @@
 public class Main {
     public static void main(String[] args) {
         // Create player character
-        Character player = new Character("Player1", 90, 80);
+        Character player = new Character("Player1", 95, 80);
         System.out.println("Selamat datang, " + player.getName() + "!");
         
         

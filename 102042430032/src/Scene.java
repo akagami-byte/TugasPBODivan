@@ -59,9 +59,6 @@ public class Scene {
         if (choiceB != null && !choiceB.isEmpty()) {
             System.out.println("B. " + choiceB);
         }
-        // if((this != scenes[6]) || this != scenes[5] || this != scenes[16] || this != scenes[10] || this != scenes[17]) {
-        //     System.out.println("C. " + choiceC);
-        // }
         if (choiceC != null && !choiceC.isEmpty()) {
             System.out.println("C. " + choiceC);
         }
@@ -72,11 +69,6 @@ public class Scene {
     }
 
     public Scene makeChoice(String choice, Character player) {
-        // Scene result = TakeWeaponScene(player, choice, scenes);
-        // if (result != null && this.hasMusuh()) {
-        //     return result; // Jika ada scene yang diambil, kembalikan scene tersebut
-        // }
-
         String item = sceneItems.get(choice.toUpperCase());
         if (item != null) {
             player.setItem(item);
@@ -94,16 +86,16 @@ public class Scene {
                 if (!player.containsItem("Ju-hee")) {
                     System.out.println("\n Opsi terkunci karena kamu tidak memilih Ju-hee di scene sebelumnya");
                     return this; // Tetap di scene saat ini
-                }
+                    }
                 }
             case "C" -> {
                 if (!player.containsItem("Kartu Akses")) {
                     System.out.println("\n Opsi terkunci karena kamu tidak memilih Kartu Akses di scene sebelumnya");
                     return this; // Tetap di scene saat ini
+                    }
                 }
-                }
+            }
         }
-    }
 
         switch (choice.toUpperCase()) {
             case "A":

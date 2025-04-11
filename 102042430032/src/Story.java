@@ -5,7 +5,6 @@ public class Story {
     private Character player;
     private Scanner scanner;
     private int currentSceneIndex;
-    
     public String getInput(){return scanner.nextLine();}
     public void setInput(String input){this.scanner = new Scanner(input);}
 
@@ -65,10 +64,10 @@ public class Story {
                 System.out.println("Game Over! Health Anda habis.");
                 break;
             }
-            if(player.getXP() <= 100) {
-                System.out.println("Game Over! XP Anda habis..");
-                break;
-            }
+            // if(player.getXP() <= 100) {
+            //     System.out.println("Game Over! XP Anda habis..");
+            //     break;
+            // }
         }
     }
 }
